@@ -1,0 +1,29 @@
+<ion-content>
+  <div class="ion-padding">
+    <h1 class="center">Create an Account</h1>
+    <div>
+      <ion-list>
+        <ion-item>
+          <ion-label>First Name:</ion-label>
+          <ion-input type="text" placeholder="first name" [(ngModel)]="user.firstname"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Last Name:</ion-label>
+          <ion-input type="text" placeholder="last name" [(ngModel)]="user.lastname"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Email:</ion-label>
+          <ion-input type="text" placeholder="email" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Password:</ion-label>
+          <ion-input type="password" placeholder="password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+    <ion-button expand="full" (click)="register()">Register</ion-button>
+    <div class="center">
+      <a href="">I already have an account</a>
+    </div>
+  </div>
+</ion-content>

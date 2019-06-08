@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="center">
+      Explore
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-card *ngFor="let property of properties" (click)="details(property.id)">
+      <ion-img src={{property.imageUrl}}></ion-img>
+      <ion-card-header>
+        <ion-card-title class="center">{{property.name}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>

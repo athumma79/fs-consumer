@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main/tabs/explore"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="center">Property Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <h1 class="center">{{property.name}}</h1>
+    <ion-card>
+      <ion-img src={{property.imageUrl}}></ion-img>
+    </ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-label>Location:</ion-label>
+        {{property.location}}
+      </ion-item>
+      <ion-item>
+        <ion-label>Price:</ion-label>
+        {{property.price}}
+      </ion-item>
+    </ion-list>
+    <h3 class="center">Book this Property</h3>
+    <ion-list>
+      <ion-item>
+        <ion-label>Date From:</ion-label>
+        <ion-datetime min="2019" max="3000" placeholder="select date" [(ngModel)]="booking.dateTo"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Date To:</ion-label>
+        <ion-datetime min="2019" max="3000" placeholder="select date" [(ngModel)]="booking.dateFrom"></ion-datetime>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" (click)="book()">Book Now</ion-button>
+  </div>
+</ion-content>

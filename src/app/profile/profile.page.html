@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="center">
+      Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <h1 class="center">{{user.firstname}} {{user.lastname}}</h1>
+    <ion-avatar class="center">
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      {{user.email}}
+    </ion-item>
+  </div>
+</ion-content>

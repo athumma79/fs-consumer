@@ -16,7 +16,7 @@ export class BookingService {
     this.httpClient.post("http://localhost:3000/properties/" + booking.propertyId + "/bookings", booking).subscribe(
       async (response: Booking) => {
         const alert = await this.alertController.create({
-          message: "your booking has successfully been made",
+          message: "your booking has been successfully made",
           buttons: ['OK']
         });
         await alert.present();

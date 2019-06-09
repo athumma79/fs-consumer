@@ -13,6 +13,10 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: '../explore/explore.module#ExplorePageModule'
+          },
+          {
+            path: 'details',
+            loadChildren: '../details/details.module#DetailsPageModule'
           }
         ]
       },
@@ -27,14 +31,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/explore',
+        redirectTo: 'main/tabs/explore',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/explore',
+    redirectTo: 'main/tabs/explore',
     pathMatch: 'full'
   }
 ];

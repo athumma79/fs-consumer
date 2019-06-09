@@ -32,8 +32,6 @@ export class DetailsPage implements OnInit {
   }
 
   book() {
-    console.log(this.booking.dateFrom);
-    console.log(this.booking.dateTo);
     this.bookingService.book(this.booking);
   }
 

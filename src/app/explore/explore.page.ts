@@ -21,7 +21,7 @@ export class ExplorePage {
   }
 
   details(id: number) {
-    this.navCtrl.navigateForward("details", {queryParams: {propId: id}});
+    this.navCtrl.navigateForward("main/tabs/explore/details", {queryParams: {propId: id}});
   }
 
 }

@@ -13,15 +13,7 @@ export class BookingService {
     private alertController: AlertController) {}
 
   book(booking: Booking) {
-    const newBooking = {
-      id: <number> booking.id,
-      dateFrom: <string> booking.dateFrom.toISOString(),
-      dateTo: <string> booking.dateTo.toISOString(),
-      status: <string> booking.status,
-      userId: <number> booking.userId,
-      propertyId: <number> booking.propertyId
-    }
-    this.httpClient.post("http://localhost:3000/properties/" + booking.propertyId + "/bookings", newBooking).subscribe(
+    this.httpClient.post("http://localhost:3000/properties/" + booking.propertyId + "/bookings", booking).subscribe(
       async (response: Booking) => {
         const alert = await this.alertController.create({
           message: "your booking has been successfully made",
@@ -30,9 +22,8 @@ export class BookingService {
         await alert.present();
       },
       async (err) => {
-        console.log(err);
         const alert = await this.alertController.create({
-          message: err.error.error.sqlMessage,
+          message: err.error.message,
           buttons: ['OK']
         });
         await alert.present();
